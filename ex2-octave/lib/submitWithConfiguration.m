@@ -107,6 +107,7 @@ function showFeedback(parts, response)
     score = '';
     partFeedback = '';
     % NEW PARSING REPONSE BODY
+    disp(response)
     partFeedback = response.linked.onDemandProgrammingScriptEvaluations_0x2E_v1{1}(1).parts.(makeValidFieldName(part{:}.id)).feedback;
     partEvaluation = response.linked.onDemandProgrammingScriptEvaluations_0x2E_v1{1}(1).parts.(makeValidFieldName(part{:}.id));
     score = sprintf('%d / %3d', partEvaluation.score, partEvaluation.maxScore);
